@@ -1,4 +1,4 @@
-package kr.letech.mvc.cmmn;
+package kr.letech.mvc.cmmn.servlet;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ControllerServlet extends HttpServlet {
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		this.doProcess(req, resp);
@@ -20,6 +20,5 @@ public class ControllerServlet extends HttpServlet {
 	}
 	
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 	}
 }
