@@ -6,8 +6,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
 	<servlet>
-		<servlet-name>myServlet</servlet-name>
+		<servlet-name>controllerServlet</servlet-name>
 		<servlet-class>kr.letech.mvc.cmmn.servlet.ControllerServlet</servlet-class>
+		<init-param>
+			<param-name>configController</param-name>
+			<param-value>/properties/controller.properties</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>controllerServlet</servlet-name>
