@@ -1,18 +1,29 @@
 package kr.letech.mvc.cmmn.controller;
 
 
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HelloController implements IController{
 
-    @Override
-    public String service(HttpServletRequest req, HttpServletResponse resp) {
-        // 1. 명령어와 관련된 비즈니스 로직
+	@Override
+	public String service(HttpServletRequest req, HttpServletResponse resp, Map<String, String[]> map) {
+		
+		Set<String> keySet=  map.keySet();
+        Iterator<String> itr = keySet.iterator();
+        while(itr.hasNext()) {
+            String key = itr.next();
+            String[] values = map.get(key);
+            String value = values[0];
+            
+            req.setAttribute(key, value);
+        }
 
-        // 2. 뷰페이지에서 사용할 정보 저장
+		return "/WEB-INF/view/hello/hello.jsp";
+	}
 
-        // 3. jsp 전달
-        return null;
-    }
 }
