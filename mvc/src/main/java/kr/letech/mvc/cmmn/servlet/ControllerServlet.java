@@ -76,6 +76,7 @@ public class ControllerServlet extends HttpServlet {
 		if (loadController == null) {
 			//404 처리 
 		}
+		
 		String view = loadController.service(req, resp, map); //jsp 경로 반환 
 		if (view != null) {
 			RequestDispatcher dispatcher = req.getRequestDispatcher(view);
