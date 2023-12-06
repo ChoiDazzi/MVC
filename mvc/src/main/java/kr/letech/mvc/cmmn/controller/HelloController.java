@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloController implements IController{
 
 	@Override
-	public String service(HttpServletRequest req, HttpServletResponse resp, Map<String, String[]> map) {
+	public String service(HttpServletRequest req, HttpServletResponse resp, Map<String, String[]> map) {//map 필요 없음 
 		
 		Set<String> keySet=  map.keySet();
         Iterator<String> itr = keySet.iterator();
